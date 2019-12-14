@@ -107,15 +107,10 @@ function AppHeader() {
 }
 
 function AppBody() {
-  let query = useQuery()
-  // console.log(query.get('meat'))
+
   return (
     <Switch>
-      <Route
-        exact={true}
-        path='/food-page/:foodId'
-        render={() => <FoodPage />}
-      />
+      <Route   exact={true} path='/food-page/:foodId'  render={() => <FoodPage />} />
       <Route exact={true} path='/login' render={() => <LoginPage />} />
       <Route exact={true} path='/' render={() => <FoodResults />} />
     </Switch>
